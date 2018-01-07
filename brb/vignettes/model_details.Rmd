@@ -1,0 +1,47 @@
+---
+title: "Summarizing FARS data"
+author: "Yordanka Gyurdieva"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+**Package Description**
+
+fars_summary package read and summarizes data from the Fatality Analysis Reporting System regarding traffic accidents.
+
+
+
+**Data**
+
+Data files are included in the package. In order to access those please use: 
+list.files(system.file("extdata", package = "fars_summary"))
+
+
+
+**Package functions**
+
+    fars_read() function
+
+This function reads a datafile from the Fatality Anaysis Reporting System containing information 
+on fatal injuries from traffic accidents. The file is in CSV format.
+
+fars_read("filename")
+
+
+    make_filename() function 
+
+This function groups and summarizes the data by month of the year
+based on input regarding the years to be included.
+
+make_filename(2013)
+
+    fars_summarize_years() function 
+    
+This function groups and summarizes the data by month of the year
+based on input regarding the years to be included.
+
+fars_summarize_years(c(2013,2014))
